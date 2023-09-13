@@ -1,0 +1,18 @@
+.toast{
+    position: fixed;
+    padding: 2rem;
+    bottom: 5rem;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    color: white;
+    z-index: 100;
+}
+
+.toast--success{
+    background-color: green;
+}
+
+.toast--error{
+    background-color: tomato;
+}

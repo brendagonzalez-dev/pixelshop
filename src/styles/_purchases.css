@@ -1,0 +1,36 @@
+
+.purchases__list{
+    display: grid;
+    gap: 1.5rem;
+}
+
+.purchases__item{
+    border: 1px solid var(--c-border);
+    padding: 1rem;
+    list-style: none;
+    background-color: var(--light-background);
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+
+.purchases__item-photo{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.purchases__item i {
+    font-size: 1.25rem;
+}
+
+.purchases__item-information{
+    display: grid;
+    gap: .5rem;
+}
+
+@media screen and (min-width: 992px) {
+    .purchases__list{
+        grid-template-columns: 1fr 1fr;
+    }
+}

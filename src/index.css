@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@100;300;400;500;700&family=Rajdhani:wght@300;500&display=swap');
+
+
+@import url('./styles/_navbar.css');
+@import url('./styles/_form.css');
+@import url('./styles/_loader.css');
+@import url('./styles/_overlay.css');
+@import url('./styles/_toast');
+@import url('./styles/_gallery.css');
+@import url('./styles/_photo-detail.css');
+@import url('./styles/_buttons.css');
+@import url('./styles/_purchases.css');
+@import url('./styles/_layout.css');
+@import url('./styles/_utilities.css');
+
+:root{
+    --background : #e8f0f5;
+    --light-background : #ffffff;
+    --primary : #4682A9;
+    --secondary : #749BC2;
+    --accent : #91C8E4;
+    --c-border : rgba(191, 200, 209);
+    --body-font : 'Montserrat', sans-serif;
+    --title-font : 'Comfortaa', cursive;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--background);
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5{
+    font-family: var(--title-font);
+}
+
+::after, 
+::before{
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+

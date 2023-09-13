@@ -1,0 +1,43 @@
+.photo-detail-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 2rem;
+}
+
+.photo-detail__image{
+    border: 1px solid var(--c-border);
+    padding: 1rem;
+    background-color: var(--light-background);
+}
+
+.photo-detail__image img{
+    border: 1px solid var(--c-border);
+}
+
+.photo-detail__information{
+    max-width: 450px;
+}
+
+.photo-detail__stock::after{
+    margin-left: 1rem;
+    padding: 0 1rem;
+    font-size: .875rem;
+}
+
+.photo-detail__stock--warn::after{
+    content: "Últimas unidades";
+    background-color: yellow;
+}
+
+.photo-detail__stock--sold-out::after{
+    content: "Agotado";
+    background-color: tomato;
+}
+
+@media screen and (min-width:776px){
+    .photo-detail-wrapper{
+        grid-template-columns: 1fr 1fr;
+     
+    }
+}
