@@ -1,9 +1,12 @@
 import {useState} from 'react'
 
-const CustomInput = ({id, label, icon, type="text", placeholder}) => {
+const CustomInput = ({id, label, icon, type="text", placeholder, register, name, required}) => {
 
     const [isFocus, setIsFocus] = useState(false)
 
+
+
+  
     return ( 
         <div 
         className={`form__input-wrapper ${isFocus && 'form__input-wrapper--focused'}`}
@@ -22,6 +25,7 @@ const CustomInput = ({id, label, icon, type="text", placeholder}) => {
             type={type} 
             id={id} 
             placeholder={placeholder}
+            {...register(name, {required})}
             onFocus={() => setIsFocus(true)}
             onBlur={() => setIsFocus(false)}
             />

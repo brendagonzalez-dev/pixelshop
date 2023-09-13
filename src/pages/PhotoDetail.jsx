@@ -85,9 +85,11 @@ const PhotoDetail = () => {
             showOverlay={isVisible}
             closeOverlay={() => setIsVisible(false)}
             >
+                {/*
                 <PurchaseForm
                 closeOverlay={() => setIsVisible(false)}
                 />
+    */}
             </Overlay>
         </main>
     )

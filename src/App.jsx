@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import {useSelector} from 'react-redux'
 import Loader from './components/Loader'
 import Toast from './components/Toast'
+import Signup from './pages/Signup'
 
 function App() {
 
@@ -24,10 +25,12 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/login" element={<Login />}/>
         <Route path="/gallery" element={<Gallery />}/>
-        <Route path="/gallery/detail/:id" element={<PhotoDetail />}/>
         <Route path="/purchases" element={<Purchases />}/>
         <Route path="/dashboard" element={<Dashboard />}/>
-        
+        <Route path="/signup" element={<Signup />}/>
+        <Route path="/gallery/detail/:id" element={<PhotoDetail />}/>
+
+    
       </Routes>
       
       {toast && <Toast type={toast.type} message={toast.message}/>}
