@@ -1,14 +1,24 @@
 import CustomInput from '../CustomInput'
 import {useForm} from "react-hook-form"
-//import {toast} from '../../store/slices/toast.slice'
-//import {useDispatch} from 'react-redux'
+import {toast} from '../../store/slices/toast.slice'
+import {useDispatch} from 'react-redux'
+import {signInWithEmailAndPassword} from "firebase/auth"
+import {auth} from '../../../firebase-app/firebase.js'
+
 
 const LoginForm = () => {
     const { register, handleSubmit } = useForm()
-    //const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = async (data) => {
+        try {
+            const credentials = await signInWithEmailAndPassword(auth, data.email, data.password)
+            console.log(credentials, "Logueado, redirigir a galeria")
+        
+        } catch (error) {
+            console.error(error.code)
+            dispatch(toast(error.message, "error"))
+        }
     }
 
 
