@@ -27,7 +27,7 @@
 
 .photo-detail__stock--warn::after{
     content: "Últimas unidades";
-    background-color: yellow;
+    background-color: orange;
 }
 
 .photo-detail__stock--sold-out::after{
